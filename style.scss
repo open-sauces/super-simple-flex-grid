@@ -1,0 +1,93 @@
+*, *:before, *:after { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 1200px; font: 14px/1 sans-serif; color: #aaa }
+
+$growMax: 20;
+$flex-row-class: flex-row;
+$bg: #eee;
+$spacing: 10px;
+
+@mixin setGrow() {
+  @for $i from 1 through $growMax {
+    .#{$flex-row-class}__cell--grow-#{$i} {
+      flex-grow: #{$i};
+    }
+  }
+}
+
+%cell-spacing {
+  margin: 0 $spacing;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.#{$flex-row-class} {
+  @include setGrow();
+  display: flex;
+
+  &__cell {
+    @extend %cell-spacing;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    &--center {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--center-h {
+      justify-content: center;
+    }
+
+    &--center-v {
+      align-items: center;
+    }
+
+    &--start-h {
+      justify-content: flex-start;
+    }
+
+    &--end-h {
+      justify-content: flex-end;
+    }
+
+    &--start-v {
+      align-items: flex-start;
+    }
+
+    &--end-v {
+      align-items: flex-end;
+    }
+
+    &--space-around {
+      justify-content: space-around;
+    }
+
+    &--space-between {
+      justify-content: space-between;
+    }
+
+    &--shrink {
+      flex-shrink: 1;
+      flex-grow: 0;
+      flex-basis: inherit;
+    }
+  }
+}
+
+.styled {
+  margin-bottom: $spacing;
+  min-height: 50px;
+  background-color: $bg;
+}
+
+.custom-width {
+  flex-grow: 0;
+  flex-basis: 200px;
+}
