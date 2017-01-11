@@ -1,6 +1,3 @@
-*, *:before, *:after { box-sizing: border-box; }
-body { margin: 0 auto; max-width: 1200px; font: 14px/1 sans-serif; color: #aaa }
-
 $growMax: 20;
 $flex-row-class: flex-row;
 $bg: #eee;
@@ -24,6 +21,12 @@ $spacing: 10px;
   &:last-of-type {
     margin-right: 0;
   }
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .#{$flex-row-class} {
@@ -78,16 +81,21 @@ $spacing: 10px;
       flex-grow: 0;
       flex-basis: inherit;
     }
+
+    &--ellipsis {
+      overflow: hidden;
+    }
+
+    &__ellipsis-content {
+      @extend %ellipsis;
+    }
+
+    &--custom-width {
+      flex-grow: 0;
+    }
+
+    &--no-margin {
+      margin: 0;
+    }
   }
-}
-
-.styled {
-  margin-bottom: $spacing;
-  min-height: 50px;
-  background-color: $bg;
-}
-
-.custom-width {
-  flex-grow: 0;
-  flex-basis: 200px;
 }
