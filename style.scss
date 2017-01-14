@@ -4,7 +4,7 @@ $bg: #eee;
 $spacing: 10px;
 
 @mixin setGrow() {
-  @for $i from 1 through $growMax {
+  @for $i from 0 through $growMax {
     .#{$flex-row-class}__cell--grow-#{$i} {
       flex-grow: #{$i};
     }
@@ -88,10 +88,6 @@ $spacing: 10px;
 
     &__ellipsis-content {
       @extend %ellipsis;
-    }
-
-    &--custom-width {
-      flex-grow: 0;
     }
 
     &--no-margin {
