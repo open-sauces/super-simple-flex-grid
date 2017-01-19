@@ -1,43 +1,33 @@
-$growMax: 20;
-$flex-row-class: flex-row;
-$bg: #eee;
-$spacing: 10px;
+$maxGrowAmount: 20 !default;
+$flexRowClass: flex-row !default;
+$margin: 10px !default;
 
-@mixin setGrow() {
-  @for $i from 0 through $growMax {
-    .#{$flex-row-class}__cell--grow-#{$i} {
+@mixin setGrowClasses() {
+  @for $i from 0 through $maxGrowAmount {
+    .#{$flexRowClass}__cell--grow-#{$i} {
       flex-grow: #{$i};
     }
   }
 }
 
-%cell-spacing {
-  margin: 0 $spacing;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
-
-%ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.#{$flex-row-class} {
-  @include setGrow();
+.#{$flexRowClass} {
+  @include setGrowClasses();
   display: flex;
+  width: 100%; // nested rows
 
   &__cell {
-    @extend %cell-spacing;
     display: flex;
     flex-basis: 0;
     flex-grow: 1;
+    margin: 0 $margin;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     &--center {
       justify-content: center;
@@ -84,10 +74,12 @@ $spacing: 10px;
 
     &--ellipsis {
       overflow: hidden;
-    }
 
-    &__ellipsis-content {
-      @extend %ellipsis;
+      &__content {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     &--no-margin {
