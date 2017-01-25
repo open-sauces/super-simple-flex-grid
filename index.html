@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo for a super simple flex grid</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--center styled">
+        <div class="inner">
+          Center
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--center-h styled">
+        <div class="inner">
+          Center H
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--center-v styled">
+        <div class="inner">
+          Center V
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--start-h styled">
+        <div class="inner">
+          Start horizontal
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--end-h styled">
+        <div class="inner">
+          End horizontal
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--start-v styled">
+        <div class="inner">
+          Start vertical
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--end-v styled">
+        <div class="inner">
+          End vertical
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--space-around styled">
+        <div class="inner">
+          Space around
+        </div>
+        <div class="inner">
+          Space around
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--space-between styled">
+        <div class="inner">
+          Space between
+        </div>
+        <div class="inner">
+          Space between
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell grow
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--shrink styled">
+        <div class="inner">
+          Cell shrink
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell grow
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--shrink styled">
+        <div class="inner">
+          Cell shrink
+        </div>
+      </div>
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell grow
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell more content
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--no-margin styled">
+        <div class="inner">
+          Cell no margin
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--no-margin styled">
+        <div class="inner">
+          Cell more content no margin
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--grow-2 styled">
+        <div class="inner">
+          Cell Grow 2
+        </div>
+      </div>
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--grow-0 custom-width styled">
+        <div class="inner">
+          Cell with custom width
+        </div>
+      </div>
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+      <div class="flex-row__cell styled">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+    </div>
+
+    <h4>Ellipsis usage</h4>
+
+    <div class="flex-row.ellipsis-example">
+      <div class="flex-row__cell flex-row__cell--ellipsis">
+        <div class="inner">
+          <div class="flex-row__cell__ellipsis-content">
+            Cell with more content that ellipsis
+          </div>
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--ellipsis">
+        <div class="inner">
+          <div class="flex-row__cell__ellipsis-content">
+            Cell with more content that ellipsis
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row.ellipsis-example">
+      <div class="flex-row__cell flex-row__cell--ellipsis">
+        <div class="inner">
+          <div class="flex-row__cell__ellipsis-content">
+            Cell with more content that ellipsis
+          </div>
+        </div>
+      </div>
+      <div class="flex-row__cell">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row.ellipsis-example">
+      <div class="flex-row__cell flex-row__cell--grow flex-row__cell--ellipsis">
+        <div class="inner">
+          <div class="flex-row__cell__ellipsis-content">
+            Cell with more content that ellipsis with grow
+          </div>
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--shrink">
+        <div class="inner">
+          Cell
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row.ellipsis-example">
+      <div class="flex-row__cell flex-row__cell--ellipsis">
+        <div class="inner">
+          <div class="flex-row__cell__ellipsis-content">
+            Cell with more content that ellipsis with grow
+          </div>
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--grow-0 custom-width">
+        <div class="inner">
+          Cell with custom width
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row.ellipsis-example">
+      <div class="flex-row__cell flex-row__cell--no-margin flex-row__cell--ellipsis">
+        <div class="inner">
+          <div class="flex-row__cell__ellipsis-content">
+            Cell with more content that ellipsis with grow and no margin
+          </div>
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--no-margin flex-row__cell--grow-0 custom-width">
+        <div class="inner">
+          Cell with custom width and no margin
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
