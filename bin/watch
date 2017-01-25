@@ -1,1 +1,1 @@
-nodemon -e scss -x "npm run build"
+node-sass -w assets/ -o assets/
