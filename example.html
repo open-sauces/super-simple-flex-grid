@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super simple flex grid example</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body style="margin: 0 auto; max-width: 1200px; font: 14px/1 sans-serif; color: #aaa">
+
+    <h3>What the grid is</h3>
+    <ul>
+      <li>An HTML centric approach to Flexbox, with emphasis on customizability through modifier classes and custom width cells</li>
+    </ul>
+    <h3>What the grid is not</h3>
+    <ul>
+      <li>
+        Responsive: In the real world, design often requires pixel perfect implementation. Having responsive styles dictated in HTML through [viewport]-[hide/show] classes as well as CSS through custom styling is a pain.
+      </li>
+    </ul>
+    
+    <br>
+
+    <h4 align="center"><i>Layout in HTML, responsiveness in CSS</i></h5>
+
+    <br>
+
+    <h3>Simple example</h3>
+
+    <div class="flex-row">
+      <div class="flex-row__cell">One</div>
+      <div class="flex-row__cell">Two</div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell">One</div>
+      <div class="flex-row__cell">Two</div>
+      <div class="flex-row__cell">Three</div>
+    </div>
+
+    <br>
+
+    <h4>Regular examples</h4>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--center" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Center
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--center-h" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Center H
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--center-v" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Center V
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--start-h" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Start horizontal
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--end-h" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        End horizontal
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--start-v" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Start vertical
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--end-v" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        End vertical
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--space-around" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div>
+          Space around
+        </div>
+        <div>
+          Space
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--space-between" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div>
+          Space between
+        </div>
+        <div>
+          Space
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell grow
+      </div>
+      <div class="flex-row__cell flex-row__cell--shrink" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell shrink
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell grow
+      </div>
+      <div class="flex-row__cell flex-row__cell--shrink" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell shrink
+      </div>
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell grow
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell more content
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell flex-row__cell--no-margin" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell no margin
+      </div>
+      <div class="flex-row__cell flex-row__cell--no-margin" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell more content no margin
+      </div>
+    </div>
+
+    <br>
+
+    <div class="flex-row">
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+      <div class="flex-row__cell flex-row__cell--grow-2" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell Grow 2
+      </div>
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+      <div class="flex-row__cell flex-row__cell--grow-0" style="background-color: #eee; margin-bottom: 10px; min-height: 30px; flex-basis: 150px">
+        Cell with custom width
+      </div>
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+      <div class="flex-row__cell" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+    </div>
+
+    <br>
+
+    <h4>Ellipsis examples</h4>
+
+    <div class="flex-row ellipsis-example" style="margin: 0 auto; width: 400px">
+      <div class="flex-row__cell flex-row__cell--ellipsis" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div class="inner flex-row__cell--ellipsis__content">
+          Cell with more content than can be displayed and ellipsis
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--ellipsis" style="background-color: #ddd; margin-bottom: 10px; min-height: 30px">
+        <div class="inner flex-row__cell--ellipsis__content">
+          Cell with more content than can be displayed and ellipsis
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-row ellipsis-example" style="margin: 0 auto; width: 400px">
+      <div class="flex-row__cell flex-row__cell--ellipsis" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div class="inner flex-row__cell--ellipsis__content">
+          Cell with more content than can be displayed and ellipsis
+        </div>
+      </div>
+      <div class="flex-row__cell" style="background-color: #ddd; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+    </div>
+
+    <div class="flex-row ellipsis-example" style="margin: 0 auto; width: 400px">
+      <div class="flex-row__cell flex-row__cell--grow flex-row__cell--ellipsis" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div class="inner flex-row__cell--ellipsis__content">
+          Cell with more content than can be displayed and ellipsis with grow
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--shrink" style="background-color: #ddd; margin-bottom: 10px; min-height: 30px">
+        Cell
+      </div>
+    </div>
+
+    <div class="flex-row ellipsis-example" style="margin: 0 auto; width: 400px">
+      <div class="flex-row__cell flex-row__cell--ellipsis" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div class="inner flex-row__cell--ellipsis__content">
+          Cell with more content than can be displayed and ellipsis with grow
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--grow-0" style="background-color: #ddd; margin-bottom: 10px; min-height: 30px; flex-basis: 150px">
+        Cell with custom width
+      </div>
+    </div>
+
+    <div class="flex-row ellipsis-example" style="margin: 0 auto; width: 400px">
+      <div class="flex-row__cell flex-row__cell--no-margin flex-row__cell--ellipsis" style="background-color: #eee; margin-bottom: 10px; min-height: 30px">
+        <div class="inner flex-row__cell--ellipsis__content">
+          Cell with more content than can be displayed and ellipsis with grow and no margin
+        </div>
+      </div>
+      <div class="flex-row__cell flex-row__cell--no-margin flex-row__cell--grow-0" style="background-color: #ddd; margin-bottom: 10px; min-height: 30px; flex-basis: 150px">
+        Cell with custom width and no margin
+      </div>
+    </div>
+
+    <br>
+
+  </body>
+</html>
