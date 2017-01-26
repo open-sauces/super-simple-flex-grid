@@ -4,8 +4,8 @@
   "description": "A super simple flex grid",
   "main": "style.scss",
   "scripts": {
-    "build": "./bin/build",
-    "watch": "./bin/watch"
+    "build": "node-sass --include-path scss assets/style.scss assets/style.css",
+    "watch": "node-sass -w assets/ -o assets/"
   },
   "repository": {
     "type": "git",
