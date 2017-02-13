@@ -1,0 +1,126 @@
+$maxGrowAmount: 20 !default;
+$margin: 10px !default;
+
+@mixin setGrowClasses() {
+  @for $i from 0 through $maxGrowAmount {
+    .flex-row__cell--grow-#{$i} {
+      flex-grow: #{$i};
+    }
+  }
+}
+
+$modifiers: (
+  grow: 'grow',
+  center: 'center',
+  centerH: 'center-h',
+  centerV: 'center-v',
+  startH: 'start-h',
+  endH: 'end-h',
+  startV: 'start-v',
+  endV: 'end-v',
+  spaceAround: 'space-around',
+  spaceBetween: 'space-between',
+  shrink: 'shrink',
+  ellipsis: 'ellipsis',
+  ellipsisContent: 'ellipsis__content',
+  noMargin: 'no-margin',
+)
+
+:export{
+  grow: #{map-get($modifiers, grow)};
+  center: #{map-get($modifiers, center)};
+  centerH: #{map-get($modifiers, centerH)};
+  centerV: #{map-get($modifiers, centerV)};
+  startH: #{map-get($modifiers, startH)};
+  endH: #{map-get($modifiers, endH)};
+  startV: #{map-get($modifiers, startV)};
+  endV: #{map-get($modifiers, endV)};
+  spaceAround: #{map-get($modifiers, spaceAround)};
+  spaceBetween: #{map-get($modifiers, spaceBetween)};
+  shrink: #{map-get($modifiers, shrink)};
+  ellipsis: #{map-get($modifiers, ellipsis)};
+  ellipsisContent: #{map-get($modifiers, ellipsisContent)};
+  noMargin: #{map-get($modifiers, noMargin)};
+}
+
+@function determineModifier($modifier) {
+  @return (--#{map-get($modifiers, $modifier)});
+}
+
+.flex-row {
+  @include setGrowClasses();
+  display: flex;
+  width: 100%;
+
+  &__cell {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0 $margin;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &#{determineModifier(center)} {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &#{determineModifier(centerH)} {
+      justify-content: center;
+    }
+
+    &#{determineModifier(centerV)} {
+      align-items: center;
+    }
+
+    &#{determineModifier(startH)} {
+      justify-content: flex-start;
+    }
+
+    &#{determineModifier(endV)} {
+      justify-content: flex-end;
+    }
+
+    &#{determineModifier(endV)} {
+      align-items: flex-start;
+    }
+
+    &#{determineModifier(endV)} {
+      align-items: flex-end;
+    }
+
+    &#{determineModifier(spaceAround)} {
+      justify-content: space-around;
+    }
+
+    &#{determineModifier(spaceBetween)} {
+      justify-content: space-between;
+    }
+
+    &#{determineModifier(shrink)} {
+      flex-shrink: 1;
+      flex-grow: 0;
+      flex-basis: inherit;
+    }
+
+    &#{determineModifier(ellipsis)} {
+      overflow: hidden;
+    }
+
+    &#{determineModifier(ellipsisContent)} {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &#{determineModifier(noMargin)} {
+      margin: 0 !important;
+    }
+  }
+}
