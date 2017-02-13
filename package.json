@@ -1,11 +1,11 @@
 {
   "name": "super-simple-flex-grid",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A super simple flex grid",
   "main": "style.scss",
   "scripts": {
-    "build": "node-sass --include-path scss ./style.scss ./example/style.css",
-    "watch": "node-sass -w ./ -o ./example"
+    "build": "node-sass --include-path scss ./src/style.scss ./example/style.css",
+    "watch": "node-sass -w ./src -o ./example"
   },
   "repository": {
     "type": "git",

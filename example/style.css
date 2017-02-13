@@ -1,3 +1,19 @@
+:export {
+  grow: grow;
+  center: center;
+  centerH: center-h;
+  centerV: center-v;
+  startH: start-h;
+  endH: end-h;
+  startV: start-v;
+  endV: end-v;
+  spaceAround: space-around;
+  spaceBetween: space-between;
+  shrink: shrink;
+  ellipsis: ellipsis;
+  ellipsisContent: ellipsis__content;
+  noMargin: no-margin; }
+
 .flex-row {
   display: flex;
   width: 100%; }
@@ -61,9 +77,9 @@
       align-items: center; }
     .flex-row__cell--start-h {
       justify-content: flex-start; }
-    .flex-row__cell--end-h {
+    .flex-row__cell--end-v {
       justify-content: flex-end; }
-    .flex-row__cell--start-v {
+    .flex-row__cell--end-v {
       align-items: flex-start; }
     .flex-row__cell--end-v {
       align-items: flex-end; }
@@ -77,9 +93,9 @@
       flex-basis: inherit; }
     .flex-row__cell--ellipsis {
       overflow: hidden; }
-      .flex-row__cell--ellipsis__content {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
+    .flex-row__cell--ellipsis__content {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .flex-row__cell--no-margin {
       margin: 0 !important; }
