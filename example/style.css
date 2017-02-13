@@ -77,9 +77,9 @@
       align-items: center; }
     .flex-row__cell--start-h {
       justify-content: flex-start; }
-    .flex-row__cell--end-v {
+    .flex-row__cell--end-h {
       justify-content: flex-end; }
-    .flex-row__cell--end-v {
+    .flex-row__cell--start-v {
       align-items: flex-start; }
     .flex-row__cell--end-v {
       align-items: flex-end; }

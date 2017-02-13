@@ -83,11 +83,11 @@ $modifiers: (
       justify-content: flex-start;
     }
 
-    &#{determineModifier(endV)} {
+    &#{determineModifier(endH)} {
       justify-content: flex-end;
     }
 
-    &#{determineModifier(endV)} {
+    &#{determineModifier(startV)} {
       align-items: flex-start;
     }
 
