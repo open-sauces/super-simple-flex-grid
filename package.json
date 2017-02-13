@@ -1,6 +1,6 @@
 {
   "name": "super-simple-flex-grid",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A super simple flex grid",
   "main": "style.scss",
   "scripts": {
